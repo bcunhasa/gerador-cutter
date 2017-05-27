@@ -22,7 +22,6 @@ def selecionaCutter(nome, lista, i):
     
     for tupla in lista:
         if i >= len(nome):
-            print(i)
             return int(lista[0][1])
             
         if i >= len(tupla[0]):
@@ -32,7 +31,6 @@ def selecionaCutter(nome, lista, i):
             nova_lista.append(tupla)
     
     if nova_lista:
-        print("Iteração", i, nova_lista, "\n")
         return selecionaCutter(nome, nova_lista, i + 1)
     else:
         return lista[0][1]
